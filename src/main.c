@@ -2,7 +2,7 @@
 
 BSD 3-Clause License
 
-Copyright (c) 2015-2023, SwissMicros
+Copyright (c) 2015-2025, SwissMicros
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -480,7 +480,7 @@ void add_edit_key(int key) {
       break;
 
     default: // Numbers
-      if ( !dot && ((len == 1 && ed[0] == '0') || (ed[len-1] == '0' && !isdigit(ed[len-2]))) )
+      if ( !dot && ((len == 1 && ed[0] == '0') || (ed[len-1] == '0' && !isdigit((int)ed[len-2]))) )
         ed[--len] = 0; // Remove redundant 0
       ed_cat(key_to_char[key], len);
       break;
