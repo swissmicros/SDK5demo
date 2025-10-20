@@ -966,6 +966,13 @@ void make_date_filename(char * str, const char * dir, const char * ext);
 
 
 // ---------------------------
+//  QR code
+// ---------------------------
+
+void qrcode_disp(QRCode *qr, int xo, int yo, int z);
+
+
+// ---------------------------
 //  System timers
 // ---------------------------
 
